@@ -10,5 +10,4 @@ class PageController extends Controller
     public function show($name = '') {
         return Page::getPage($name);
     }
-
 }

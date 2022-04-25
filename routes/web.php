@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// Auth
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 // Page Routes
 Route::get('/{name?}', 'App\Http\Controllers\PageController@show');
+
+require __DIR__.'/auth.php';
